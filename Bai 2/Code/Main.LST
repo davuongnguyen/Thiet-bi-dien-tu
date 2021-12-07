@@ -1,0 +1,98 @@
+A51 MACRO ASSEMBLER  MAIN                                                                 12/07/2021 14:29:57 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02
+OBJECT MODULE PLACED IN Main.OBJ
+ASSEMBLER INVOKED BY: D:\Program Files (x86)\C51\BIN\A51.EXE Main.asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     org 0000H
+                       2     
+0000                   3     main: 
+0000 309004            4             jnb p1.0,quaynguoc
+0003 110D              5             call quaythuan
+0005 80F9              6             jmp main
+                       7     
+0007                   8     quaynguoc:
+0007 75A001            9             mov p2,#01h
+000A 8007             10             jmp dieutoc
+000C 22               11             ret
+                      12     
+000D                  13     quaythuan:
+000D 75A002           14             mov p2,#02h
+0010 8001             15             jmp dieutoc
+0012 22               16             ret
+                      17     
+0013                  18     dieutoc:
+0013 309106           19             jnb p1.1, quay50
+0016 30920E           20             jnb p1.2, quay100
+0019 80E5             21             jmp main
+001B 22               22             ret
+                      23     
+001C                  24     quay50:
+001C D280             25             setb p0.0
+001E 1132             26             call delay50
+0020 C280             27             clr p0.0
+0022 1132             28             call delay50
+                      29     
+0024 80DA             30             jmp main
+0026 22               31             ret
+                      32     
+0027                  33     quay100:
+0027 D280             34             setb p0.0
+0029 113B             35             call delay100
+002B C280             36             clr p0.0
+002D 1132             37             call delay50
+                      38     
+002F 80CF             39             jmp main
+0031 22               40             ret
+                      41     
+0032                  42     delay50:
+0032 7BC8             43                 mov r3,#200
+0034                  44             delay0:
+0034 7D64             45                     mov r5,#100
+0036 DDFE             46                     djnz r5,$
+0038 DBFA             47                     djnz r3,delay0
+003A 22               48             ret
+                      49     
+003B                  50     delay100:
+003B 7B64             51                 mov r3,#100
+003D                  52             delay1:
+003D 7D64             53                     mov r5,#100
+003F DDFE             54                     djnz r5,$
+0041 DBFA             55                     djnz r3,delay1
+0043 22               56             ret
+                      57     
+                      58     
+A51 MACRO ASSEMBLER  MAIN                                                                 12/07/2021 14:29:57 PAGE     2
+
+                      59     
+                      60     end
+A51 MACRO ASSEMBLER  MAIN                                                                 12/07/2021 14:29:57 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DELAY0 . . . . . .  C ADDR   0034H   A   
+DELAY1 . . . . . .  C ADDR   003DH   A   
+DELAY100 . . . . .  C ADDR   003BH   A   
+DELAY50. . . . . .  C ADDR   0032H   A   
+DIEUTOC. . . . . .  C ADDR   0013H   A   
+MAIN . . . . . . .  C ADDR   0000H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+QUAY100. . . . . .  C ADDR   0027H   A   
+QUAY50 . . . . . .  C ADDR   001CH   A   
+QUAYNGUOC. . . . .  C ADDR   0007H   A   
+QUAYTHUAN. . . . .  C ADDR   000DH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
