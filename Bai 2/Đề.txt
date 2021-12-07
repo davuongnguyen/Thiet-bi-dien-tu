@@ -1,0 +1,5 @@
+Câu 2: Cho mạch điều khiển động cơ như hình vẽ. Viết chương trình cho VĐK 8051 với yêu cầu sau:
+Chân p1.0 =1 Động cơ quay thuận
+Chân p1.0=0 Động cơ quay ngược
+Chân p1.1=0 động cơ quay với tốc độ 50 vòng /phút
+Chân p1.2=0 động cơ quay với tốc độ 100 vòng /phút

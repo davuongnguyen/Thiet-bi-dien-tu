@@ -23,23 +23,23 @@ dieutoc:
 
 quay50:
 	setb p0.0
-	call delay50
+	call delay2ms
 	clr p0.0
-	call delay50
+	call delay2ms
 
 	jmp main
 	ret
 
 quay100:
 	setb p0.0
-	call delay100
+	call delay1ms
 	clr p0.0
-	call delay50
+	call delay2ms
 
 	jmp main
 	ret
 
-delay50:
+delay2ms:
 	    mov r3,#200
 	delay0:
 		mov r5,#100
@@ -47,7 +47,7 @@ delay50:
 		djnz r3,delay0
 	ret
 
-delay100:
+delay1ms:
 	    mov r3,#100
 	delay1:
 		mov r5,#100
