@@ -66,3 +66,115 @@ linking...
 Program Size: data=9.0 xdata=0 code=83
 creating hex file from "code_bai2"...
 "code_bai2" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+assembling Main.asm...
+linking...
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    0000H
+    TO:      0002H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 004EH
+Program Size: data=9.0 xdata=0 code=83
+creating hex file from "code_bai2"...
+"code_bai2" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+assembling Main.asm...
+linking...
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    0000H
+    TO:      0002H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 004EH
+Program Size: data=9.0 xdata=0 code=83
+creating hex file from "code_bai2"...
+"code_bai2" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+assembling Main.asm...
+linking...
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    0000H
+    TO:      0002H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 004EH
+Program Size: data=9.0 xdata=0 code=83
+creating hex file from "code_bai2"...
+"code_bai2" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+assembling Main.asm...
+linking...
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    0000H
+    TO:      0002H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 004EH
+Program Size: data=9.0 xdata=0 code=83
+creating hex file from "code_bai2"...
+"code_bai2" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+assembling Main.asm...
+linking...
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    0000H
+    TO:      0002H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 0050H
+Program Size: data=9.0 xdata=0 code=85
+creating hex file from "code_bai2"...
+"code_bai2" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+assembling Main.asm...
+linking...
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    0000H
+    TO:      0002H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 004EH
+Program Size: data=9.0 xdata=0 code=83
+creating hex file from "code_bai2"...
+"code_bai2" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+assembling Main.asm...
+linking...
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    0000H
+    TO:      0002H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 004EH
+Program Size: data=9.0 xdata=0 code=83
+creating hex file from "code_bai2"...
+"code_bai2" - 0 Error(s), 3 Warning(s).
