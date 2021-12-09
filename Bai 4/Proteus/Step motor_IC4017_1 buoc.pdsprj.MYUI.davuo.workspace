@@ -32,7 +32,10 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="695" x="509" flags="00008001" y="190" h="459" pid="0" iid="6">
+   <POPUP w="695" x="979" flags="00000001" y="175" h="459" pid="0" iid="8">
+    <PROPERTIES/>
+   </POPUP>
+   <POPUP w="511" x="108" flags="00008001" y="220" h="153" pid="0" iid="1">
     <PROPERTIES/>
    </POPUP>
   </PWI>

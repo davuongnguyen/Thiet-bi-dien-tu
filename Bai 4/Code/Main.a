@@ -1,0 +1,52 @@
+org 0000H
+
+main:
+	jb p1.0, truonghop1
+	call truonghop2
+
+truonghop1:
+	call quaythuan
+	call quaythuan
+	call quaynguoc
+	call quaynguoc
+	jmp main
+
+truonghop2:
+	call quaythuan
+	stop:
+		mov p2, #00h
+		jnb p1.0, stop
+	ret
+
+quaythuan:
+	mov a, #01h
+
+	lap:
+		mov p2, a
+		call delay
+		rl a
+	cjne a,#10h, lap
+	ret
+
+quaynguoc:
+	mov a, #08h
+
+	lap2:
+		mov p2, a
+		call delay
+		rr a
+	cjne a,#80h, lap2
+	ret
+
+delay:
+	mov r4,#8
+	delay3:
+	    mov r3,#0ffH
+	delay1:
+		mov r5,#0ffh
+		djnz r5,$
+		djnz r3,delay1
+		djnz r4,delay3
+	ret
+
+	end
