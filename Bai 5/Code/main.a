@@ -1,12 +1,14 @@
 org 0000H
 
 main:
+	mov p3, #0ffh
 	jnb p1.0, truonghop1
 	jnb p1.1, truonghop2
 	jmp main
 
 truonghop1:
-	mov r6, #5
+	mov p3, #0feh
+	mov r6, #10 
 	tiep:
 		jnb p1.2, main
 		call quaythuan
@@ -14,7 +16,8 @@ truonghop1:
 	jmp main
 
 truonghop2:
-	mov r7, #5
+	mov p3, #0fdh
+	mov r7, #10
 	tiep1:
 		jnb p1.2, main
 		call quaynguoc

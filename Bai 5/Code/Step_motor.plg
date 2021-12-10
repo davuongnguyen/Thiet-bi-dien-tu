@@ -8,37 +8,6 @@ Project File Date:  12/10/2021
 
 <h2>Output:</h2>
 Build target 'Target 1'
-assembling STARTUP.A51...
-assembling main.a...
-linking...
-*** WARNING L5: CODE SPACE MEMORY OVERLAP
-    FROM:    0000H
-    TO:      0002H
-*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
-    SYMBOL:  ?C_START
-    MODULE:  STARTUP.obj (?C_STARTUP)
-*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
-    SYMBOL:  ?C_START
-    MODULE:  STARTUP.obj (?C_STARTUP)
-    ADDRESS: 004BH
-Program Size: data=9.0 xdata=0 code=80
-"Step_motor" - 0 Error(s), 3 Warning(s).
-Build target 'Target 1'
-linking...
-*** WARNING L5: CODE SPACE MEMORY OVERLAP
-    FROM:    0000H
-    TO:      0002H
-*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
-    SYMBOL:  ?C_START
-    MODULE:  STARTUP.obj (?C_STARTUP)
-*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
-    SYMBOL:  ?C_START
-    MODULE:  STARTUP.obj (?C_STARTUP)
-    ADDRESS: 004BH
-Program Size: data=9.0 xdata=0 code=80
-creating hex file from "Step_motor"...
-"Step_motor" - 0 Error(s), 3 Warning(s).
-Build target 'Target 1'
 assembling main.a...
 linking...
 *** WARNING L5: CODE SPACE MEMORY OVERLAP
@@ -66,8 +35,8 @@ linking...
 *** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
     SYMBOL:  ?C_START
     MODULE:  STARTUP.obj (?C_STARTUP)
-    ADDRESS: 004BH
-Program Size: data=9.0 xdata=0 code=80
+    ADDRESS: 0052H
+Program Size: data=9.0 xdata=0 code=87
 creating hex file from "Step_motor"...
 "Step_motor" - 0 Error(s), 3 Warning(s).
 Build target 'Target 1'
@@ -82,7 +51,70 @@ linking...
 *** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
     SYMBOL:  ?C_START
     MODULE:  STARTUP.obj (?C_STARTUP)
-    ADDRESS: 004BH
-Program Size: data=9.0 xdata=0 code=80
+    ADDRESS: 0054H
+Program Size: data=9.0 xdata=0 code=89
+creating hex file from "Step_motor"...
+"Step_motor" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+assembling main.a...
+linking...
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    0000H
+    TO:      0002H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 0054H
+Program Size: data=9.0 xdata=0 code=89
+creating hex file from "Step_motor"...
+"Step_motor" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+assembling main.a...
+linking...
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    0000H
+    TO:      0002H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 0054H
+Program Size: data=9.0 xdata=0 code=89
+creating hex file from "Step_motor"...
+"Step_motor" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+assembling main.a...
+main.a(6): error A46: CODE-ADDRESS EXPECTED
+main.a(10): error A8: ATTEMPT TO DEFINE AN ALREADY DEFINED LABEL
+Target not created
+Build target 'Target 1'
+assembling main.a...
+main.a(3): error A46: CODE-ADDRESS EXPECTED
+main.a(7): error A8: ATTEMPT TO DEFINE AN ALREADY DEFINED LABEL
+Target not created
+Build target 'Target 1'
+assembling main.a...
+main.a(3): error A46: CODE-ADDRESS EXPECTED
+main.a(6): error A8: ATTEMPT TO DEFINE AN ALREADY DEFINED LABEL
+Target not created
+Build target 'Target 1'
+assembling main.a...
+linking...
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    0000H
+    TO:      0002H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 0054H
+Program Size: data=9.0 xdata=0 code=89
 creating hex file from "Step_motor"...
 "Step_motor" - 0 Error(s), 3 Warning(s).
