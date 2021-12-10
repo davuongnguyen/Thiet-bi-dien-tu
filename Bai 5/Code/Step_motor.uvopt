@@ -153,7 +153,7 @@
         <aSer4>0</aSer4>
         <StkLoc>0</StkLoc>
         <TrcWin>0</TrcWin>
-        <newCpu>0</newCpu>
+        <newCpu>1</newCpu>
         <uProt>0</uProt>
       </DebugFlag>
       <LintExecutable></LintExecutable>
@@ -167,8 +167,8 @@
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
-      <GroupNumber>1</GroupNumber>
-      <FileNumber>1</FileNumber>
+      <GroupNumber>0</GroupNumber>
+      <FileNumber>0</FileNumber>
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -181,18 +181,18 @@
       <FilenameWithoutPath>STARTUP.A51</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>1</GroupNumber>
-      <FileNumber>2</FileNumber>
+      <GroupNumber>0</GroupNumber>
+      <FileNumber>0</FileNumber>
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>2</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>5</CurrentLine>
+      <TopLine>8</TopLine>
+      <CurrentLine>8</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Main.a</PathWithFileName>
-      <FilenameWithoutPath>Main.a</FilenameWithoutPath>
+      <PathWithFileName>.\main.a</PathWithFileName>
+      <FilenameWithoutPath>main.a</FilenameWithoutPath>
     </File>
   </Group>
 
@@ -1540,10 +1540,10 @@
       <ActiveTab>0</ActiveTab>
       <Documents>
         <Doc>
-          <Name>.\Main.a</Name>
-          <ColumnNumber>2</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>5</CurrentLine>
+          <Name>.\main.a</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>8</TopLine>
+          <CurrentLine>8</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>

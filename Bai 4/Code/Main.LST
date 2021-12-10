@@ -1,4 +1,4 @@
-A51 MACRO ASSEMBLER  MAIN                                                                 12/09/2021 14:46:31 PAGE     1
+A51 MACRO ASSEMBLER  MAIN                                                                 12/10/2021 14:03:47 PAGE     1
 
 
 MACRO ASSEMBLER A51 V8.02
@@ -48,7 +48,7 @@ LOC  OBJ            LINE     SOURCE
 002D 22               39             ret
                       40     
 002E                  41     delay:
-002E 7C08             42             mov r4,#8
+002E 7C01             42             mov r4,#1
 0030                  43             delay3:
 0030 7BFF             44                 mov r3,#0ffH
 0032                  45             delay1:
@@ -59,7 +59,7 @@ LOC  OBJ            LINE     SOURCE
 003A 22               50             ret
                       51     
                       52             end
-A51 MACRO ASSEMBLER  MAIN                                                                 12/09/2021 14:46:31 PAGE     2
+A51 MACRO ASSEMBLER  MAIN                                                                 12/10/2021 14:03:47 PAGE     2
 
 SYMBOL TABLE LISTING
 ------ ----- -------

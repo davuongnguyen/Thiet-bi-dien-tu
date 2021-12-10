@@ -1,26 +1,28 @@
 org 0000H
 
 main:
-	jb p1.0, truonghop1
-	call truonghop2
+	jnb p1.0, truonghop1
+	jnb p1.1, truonghop2
+	jmp main
 
 truonghop1:
-	call quaythuan
-	call quaythuan
-	call quaynguoc
-	call quaynguoc
+	mov r6, #5
+	tiep:
+		jnb p1.2, main
+		call quaythuan
+		djnz r6,tiep
 	jmp main
 
 truonghop2:
-	call quaythuan
-	stop:
-		mov p2, #00h
-		jnb p1.0, stop
-	ret
+	mov r7, #5
+	tiep1:
+		jnb p1.2, main
+		call quaynguoc
+		djnz r7,tiep1
+	jmp main
 
 quaythuan:
 	mov a, #01h
-
 	lap:
 		mov p2, a
 		call delay
@@ -30,7 +32,6 @@ quaythuan:
 
 quaynguoc:
 	mov a, #08h
-
 	lap2:
 		mov p2, a
 		call delay
@@ -49,4 +50,4 @@ delay:
 		djnz r4,delay3
 	ret
 
-	end
+end
