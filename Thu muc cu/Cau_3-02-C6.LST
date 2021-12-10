@@ -1,0 +1,132 @@
+A51 MACRO ASSEMBLER  CAU_3_02_C6                                                          12/05/2019 16:39:36 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN Cau_3-02-C6.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE Cau_3-02-C6.a51 SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     org 0
+                       2     
+0000                   3     main:
+                       4     
+0000 7803              5     mov r0,#3
+0002                   6     v1:
+0002 110E              7     call sang_dan_tat_dan
+0004 D8FC              8     djnz r0,v1
+                       9     
+0006 7804             10     mov r0,#4
+0008                  11     v2:
+0008 1137             12     call sang_tu_giua_ra
+000A D8FC             13     djnz r0,v2
+                      14     
+000C 1100             15     call main
+                      16     
+                      17     
+                      18     
+                      19     
+000E                  20     sang_dan_tat_dan:
+000E 1168             21     call delay
+0010 758000           22     mov p0,#00h
+0013 75A000           23     mov p2,#00h
+                      24     
+0016                  25     sang_dan:
+0016 1168             26     call delay
+0018 D3               27     setb c
+0019 E580             28     mov a,p0
+001B 33               29     rlc a
+001C F580             30     mov p0,a
+001E E5A0             31     mov a,p2
+0020 33               32     rlc a
+0021 F5A0             33     mov p2,a
+0023 30A3F0           34     jnb p2.3, sang_dan
+                      35     
+0026                  36     tat_dan:
+0026 1168             37     call delay
+0028 C3               38     clr c
+0029 E580             39     mov a,p0
+002B 33               40     rlc a
+002C F580             41     mov p0,a
+002E E5A0             42     mov a,p2
+0030 33               43     rlc a
+0031 F5A0             44     mov p2,a
+0033 20A3F0           45     jb p2.3, tat_dan
+                      46     
+0036 22               47     ret
+                      48     
+                      49     
+                      50     
+                      51     
+0037                  52     sang_tu_giua_ra:
+0037 1168             53     call delay
+0039 758060           54     mov p0,#01100000b
+003C 75A000           55     mov p2,#00000000b
+003F 1168             56     call delay
+0041 7580F0           57     mov p0,#11110000b
+0044 75A000           58     mov p2,#00000000b
+A51 MACRO ASSEMBLER  CAU_3_02_C6                                                          12/05/2019 16:39:36 PAGE     2
+
+0047 1168             59     call delay
+0049 7580F8           60     mov p0,#11111000b
+004C 75A001           61     mov p2,#00000001b
+004F 1168             62     call delay
+0051 7580FC           63     mov p0,#11111100b
+0054 75A003           64     mov p2,#00000011b
+0057 1168             65     call delay
+0059 7580FE           66     mov p0,#11111110b
+005C 75A007           67     mov p2,#00000111b
+005F 1168             68     call delay
+0061 7580FF           69     mov p0,#11111111b
+0064 75A00F           70     mov p2,#00001111b
+0067 22               71     ret
+                      72     
+                      73     
+                      74     
+                      75     
+0068                  76     delay:
+0068 790A             77     mov r1,#10
+006A                  78     delay_60ms:
+006A 758901           79     mov tmod,#00000001b
+006D 758C15           80     mov th0,#high(5536)
+0070 758AA0           81     mov tl0,#low(5536)
+0073 D28C             82     setb tr0
+0075 308DFD           83     jnb tf0,$
+0078 C28D             84     clr tf0
+007A D9EE             85     djnz r1,delay_60ms
+007C 22               86     ret
+                      87     
+                      88     
+                      89     
+                      90     
+                      91     end
+A51 MACRO ASSEMBLER  CAU_3_02_C6                                                          12/05/2019 16:39:36 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DELAY. . . . . . .  C ADDR   0068H   A   
+DELAY_60MS . . . .  C ADDR   006AH   A   
+MAIN . . . . . . .  C ADDR   0000H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+SANG_DAN . . . . .  C ADDR   0016H   A   
+SANG_DAN_TAT_DAN .  C ADDR   000EH   A   
+SANG_TU_GIUA_RA. .  C ADDR   0037H   A   
+TAT_DAN. . . . . .  C ADDR   0026H   A   
+TF0. . . . . . . .  B ADDR   0088H.5 A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+V1 . . . . . . . .  C ADDR   0002H   A   
+V2 . . . . . . . .  C ADDR   0008H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

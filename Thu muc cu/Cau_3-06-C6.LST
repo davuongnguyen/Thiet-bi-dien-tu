@@ -1,0 +1,103 @@
+A51 MACRO ASSEMBLER  CAU_3_06_C6                                                          12/07/2019 14:56:47 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN Cau_3-06-C6.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE Cau_3-06-C6.a51 SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     org 0
+                       2     
+0000                   3     main:
+0000 900041            4     mov dptr,#bangma
+0003 758950            5     mov tmod,#50h
+0006 758B00            6     mov tl1,#00h
+0009 D28E              7     setb tr1
+                       8     
+000B                   9     lap:
+000B 1116             10     call giaima
+000D 1125             11     call hienthi
+000F E58B             12     mov a, tl1
+0011 B447F7           13     cjne a,#71,lap
+0014 80EA             14     jmp main
+                      15     
+                      16     
+                      17     
+                      18     
+0016                  19     giaima:
+0016 E58B             20     mov a,tl1
+0018 75F00A           21     mov b,#10
+001B 84               22     div ab
+001C 93               23     movc a,@a+dptr
+001D F520             24     mov 20h,a
+001F E5F0             25     mov a,b
+0021 93               26     movc a,@a+dptr
+0022 F521             27     mov 21h,a
+                      28     
+0024 22               29     ret
+                      30     
+                      31     
+                      32     
+                      33     
+0025                  34     hienthi:
+0025 852080           35     mov p0,20h
+0028 75A0FD           36     mov p2,#11111101b
+002B 113C             37     call delay
+002D 75A0FF           38     mov p2,#0ffh
+                      39     
+0030 852180           40     mov p0,21h
+0033 75A0FE           41     mov p2,#11111110b
+0036 113C             42     call delay
+0038 75A0FF           43     mov p2,#0ffh
+                      44     
+003B 22               45     ret
+                      46     
+                      47     
+                      48     
+                      49     
+003C                  50     delay:
+003C 7832             51     mov r0,#50
+003E D8FE             52     djnz r0,$
+                      53     
+0040 22               54     ret
+                      55     
+                      56     
+                      57     
+                      58     
+A51 MACRO ASSEMBLER  CAU_3_06_C6                                                          12/07/2019 14:56:47 PAGE     2
+
+0041 C0F9A4B0         59     bangma: db 0c0h,0f9h,0a4h,0b0h,99h,92h,82h,0f8h,80h,90h
+0045 999282F8                
+0049 8090                    
+                      60     
+                      61     
+                      62     
+                      63     
+                      64     end
+A51 MACRO ASSEMBLER  CAU_3_06_C6                                                          12/07/2019 14:56:47 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+BANGMA . . . . . .  C ADDR   0041H   A   
+DELAY. . . . . . .  C ADDR   003CH   A   
+GIAIMA . . . . . .  C ADDR   0016H   A   
+HIENTHI. . . . . .  C ADDR   0025H   A   
+LAP. . . . . . . .  C ADDR   000BH   A   
+MAIN . . . . . . .  C ADDR   0000H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+TL1. . . . . . . .  D ADDR   008BH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

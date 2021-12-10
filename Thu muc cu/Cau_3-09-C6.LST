@@ -1,0 +1,119 @@
+A51 MACRO ASSEMBLER  CAU_3_09_C6                                                          12/07/2019 23:56:22 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN Cau_3-09-C6.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE Cau_3-09-C6.a51 SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     org 0
+0000 800A              2     jmp main
+                       3     
+0003                   4     org 03h
+0003 8000              5     jmp ngat_ngoai_0
+                       6     
+                       7     
+                       8     
+                       9     
+0005                  10     ngat_ngoai_0:
+0005 08               11     inc r0
+0006 B85602           12     cjne r0,#86,thoat_ngat
+0009 7800             13     mov r0,#0
+                      14     
+000B                  15     thoat_ngat:
+000B 32               16     reti
+                      17     
+                      18     
+                      19     
+000C                  20     main:
+000C 75A881           21     mov ie,#10000001b
+000F 900046           22     mov dptr,#bangma
+0012 D288             23     setb it0
+0014 7800             24     mov r0,#0
+                      25     
+0016                  26     lap:
+0016 111C             27     call giai_ma
+0018 112A             28     call hien_thi
+001A 80FA             29     jmp lap
+                      30     
+                      31     
+                      32     
+                      33     
+001C                  34     giai_ma:
+001C E8               35     mov a,r0
+001D 75F00A           36     mov b,#10
+0020 84               37     div ab
+0021 93               38     movc a,@a+dptr
+0022 F530             39     mov 30h,a
+0024 E5F0             40     mov a,b
+0026 93               41     movc a,@a+dptr
+0027 F531             42     mov 31h,a
+                      43     
+0029 22               44     ret
+                      45     
+                      46     
+                      47     
+                      48     
+002A                  49     hien_thi:
+002A 853080           50     mov p0,30h
+002D 75A0FD           51     mov p2,#11111101b
+0030 1141             52     call delay
+0032 75A0FF           53     mov p2,#0ffh
+                      54     
+0035 853180           55     mov p0,31h
+0038 75A0FE           56     mov p2,#11111110b
+003B 1141             57     call delay
+003D 75A0FF           58     mov p2,#0ffh
+A51 MACRO ASSEMBLER  CAU_3_09_C6                                                          12/07/2019 23:56:22 PAGE     2
+
+                      59     
+0040 22               60     ret
+                      61     
+                      62     
+                      63     
+                      64     
+0041                  65     delay:
+0041 7A32             66     mov r2,#50
+0043 DAFE             67     djnz r2,$
+                      68     
+0045 22               69     ret
+                      70     
+                      71     
+                      72     
+                      73     
+0046 C0F9A4B0         74     bangma: db 0c0h,0f9h,0a4h,0b0h,99h,92h,82h,0f8h,80h,90h
+004A 999282F8                
+004E 8090                    
+                      75     
+                      76     
+                      77     
+                      78     
+                      79     end
+A51 MACRO ASSEMBLER  CAU_3_09_C6                                                          12/07/2019 23:56:22 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+BANGMA . . . . . .  C ADDR   0046H   A   
+DELAY. . . . . . .  C ADDR   0041H   A   
+GIAI_MA. . . . . .  C ADDR   001CH   A   
+HIEN_THI . . . . .  C ADDR   002AH   A   
+IE . . . . . . . .  D ADDR   00A8H   A   
+IT0. . . . . . . .  B ADDR   0088H.0 A   
+LAP. . . . . . . .  C ADDR   0016H   A   
+MAIN . . . . . . .  C ADDR   000CH   A   
+NGAT_NGOAI_0 . . .  C ADDR   0005H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+THOAT_NGAT . . . .  C ADDR   000BH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

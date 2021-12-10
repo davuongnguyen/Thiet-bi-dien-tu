@@ -1,0 +1,132 @@
+A51 MACRO ASSEMBLER  SOURCE                                                               12/05/2019 02:51:54 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN source.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE source.a51 SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     org 0
+0000                   2     main:
+                       3     
+0000 7803              4     mov r0,#3
+0002                   5     v1:
+0002 1114              6     call sangdantatdan
+0004 D8FC              7     djnz r0,v1
+                       8     
+0006 7802              9     mov r0,#2
+0008                  10     v2:
+0008 112F             11     call tattugiuara
+000A D8FC             12     djnz r0,v2
+                      13     
+000C 7804             14     mov r0,#4
+000E                  15     v3:
+000E 1149             16     call choptat
+0010 D8FC             17     djnz r0,v3
+                      18     
+0012 80EC             19     jmp main
+                      20     
+                      21     
+                      22     
+                      23     
+0014                  24     sangdantatdan:
+0014 75A0FF           25     mov p2,#0ffh
+                      26     
+0017                  27     sangdan:
+0017 1156             28     call taotre
+0019 C3               29     clr c
+001A E5A0             30     mov a,p2
+001C 33               31     rlc a
+001D F5A0             32     mov p2,a
+001F 40F6             33     jc sangdan
+                      34     
+0021 75A000           35     mov p2, #00h
+                      36     
+0024                  37     tatdan:
+0024 1156             38     call taotre
+0026 E5A0             39     mov a,p2
+0028 D3               40     setb c
+0029 33               41     rlc a
+002A F5A0             42     mov p2,a
+002C 50F6             43     jnc tatdan
+                      44     
+002E 22               45     ret
+                      46     
+                      47     
+                      48     
+                      49     
+002F                  50     tattugiuara:
+002F 1156             51     call taotre
+0031 75A000           52     mov p2,#00h
+0034 1156             53     call taotre
+0036 75A018           54     mov p2,#00011000b
+0039 1156             55     call taotre
+003B 75A03C           56     mov p2,#00111100b
+003E 1156             57     call taotre
+0040 75A07E           58     mov p2,#01111110b
+A51 MACRO ASSEMBLER  SOURCE                                                               12/05/2019 02:51:54 PAGE     2
+
+0043 1156             59     call taotre
+0045 75A0FF           60     mov p2,#11111111b
+0048 22               61     ret
+                      62     
+                      63     
+                      64     
+                      65     
+0049                  66     choptat:
+0049 1156             67     call taotre
+004B 75A000           68     mov p2,#00h
+004E 1156             69     call taotre
+0050 75A0FF           70     mov p2,#0ffh
+0053 1156             71     call taotre
+0055 22               72     ret
+                      73     
+                      74     
+                      75     
+                      76     
+0056                  77     taotre:
+0056 790A             78     mov r1,#10
+                      79     
+0058                  80     lap:
+0058 758910           81     mov tmod,#00010000b
+005B 758D4C           82     mov th1,#high(19456)
+005E 758B00           83     mov tl1,#low(19456)
+0061 D28E             84     setb tr1
+0063 308FFD           85     jnb tf1,$
+0066 C28F             86     clr tf1
+0068 D9EE             87     djnz r1,lap
+006A 22               88     ret 
+                      89     
+                      90     end
+A51 MACRO ASSEMBLER  SOURCE                                                               12/05/2019 02:51:54 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+CHOPTAT. . . . . .  C ADDR   0049H   A   
+LAP. . . . . . . .  C ADDR   0058H   A   
+MAIN . . . . . . .  C ADDR   0000H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+SANGDAN. . . . . .  C ADDR   0017H   A   
+SANGDANTATDAN. . .  C ADDR   0014H   A   
+TAOTRE . . . . . .  C ADDR   0056H   A   
+TATDAN . . . . . .  C ADDR   0024H   A   
+TATTUGIUARA. . . .  C ADDR   002FH   A   
+TF1. . . . . . . .  B ADDR   0088H.7 A   
+TH1. . . . . . . .  D ADDR   008DH   A   
+TL1. . . . . . . .  D ADDR   008BH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+V1 . . . . . . . .  C ADDR   0002H   A   
+V2 . . . . . . . .  C ADDR   0008H   A   
+V3 . . . . . . . .  C ADDR   000EH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

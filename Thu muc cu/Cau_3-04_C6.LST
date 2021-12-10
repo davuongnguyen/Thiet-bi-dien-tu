@@ -1,0 +1,92 @@
+A51 MACRO ASSEMBLER  CAU_3_04_C6                                                          12/06/2019 18:29:13 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN Cau_3-04_C6.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE Cau_3-04_C6.a51 SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     org 0
+                       2     
+0000                   3     main:
+0000 7590FF            4     mov p1,#0ffh
+0003 75A000            5     mov p2,#0
+                       6     
+0006 209008            7     jb p1.0, kiem_tra_1
+0009 D2A0              8     setb p2.0
+000B D2A4              9     setb p2.4
+000D 1132             10     call delay
+000F 80EF             11     jmp main
+                      12     
+                      13     
+0011                  14     kiem_tra_1:
+0011 209108           15     jb p1.1, kiem_tra_2
+0014 D2A1             16     setb p2.1
+0016 D2A4             17     setb p2.4
+0018 1132             18     call delay
+001A 80E4             19     jmp main
+                      20     
+                      21     
+001C                  22     kiem_tra_2:
+001C 209208           23     jb p1.2,kiem_tra_3
+001F D2A2             24     setb p2.2
+0021 D2A4             25     setb p2.4
+0023 1132             26     call delay
+0025 80D9             27     jmp main
+                      28     
+                      29     
+0027                  30     kiem_tra_3:
+0027 2093D6           31     jb p1.3, main
+002A D2A3             32     setb p2.3
+002C D2A4             33     setb p2.4
+002E 1132             34     call delay
+0030 80CE             35     jmp main
+                      36     
+                      37     
+                      38     
+                      39     
+0032                  40     delay:
+0032 783C             41     mov r0,#60
+0034                  42     nhan:
+0034 758901           43     mov tmod,#01h
+0037 758C3C           44     mov th0,#high(15536)
+003A 758AB0           45     mov tl0,#low(15536)
+003D D28C             46     setb tr0
+003F 308DFD           47     jnb tf0,$
+0042 C28D             48     clr tf0
+0044 D8EE             49     djnz r0,nhan
+                      50     
+0046 22               51     ret
+                      52     
+                      53     
+                      54     
+                      55     
+                      56     end
+A51 MACRO ASSEMBLER  CAU_3_04_C6                                                          12/06/2019 18:29:13 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DELAY. . . . . . .  C ADDR   0032H   A   
+KIEM_TRA_1 . . . .  C ADDR   0011H   A   
+KIEM_TRA_2 . . . .  C ADDR   001CH   A   
+KIEM_TRA_3 . . . .  C ADDR   0027H   A   
+MAIN . . . . . . .  C ADDR   0000H   A   
+NHAN . . . . . . .  C ADDR   0034H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+TF0. . . . . . . .  B ADDR   0088H.5 A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

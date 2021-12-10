@@ -1,0 +1,60 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\Keil C\Cau_3-04_C6.uvproj
+Project File Date:  12/06/2019
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling Cau_3-04_C6.a51...
+Cau_3-04_C6.a51(1): error A21: EXPRESSION WITH FORWARD REFERENCE NOT PERMITTED
+Target not created
+Build target 'Target 1'
+assembling Cau_3-04_C6.a51...
+linking...
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    0000H
+    TO:      0002H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 0051H
+Program Size: data=9.0 xdata=0 code=86
+creating hex file from "Cau_3-04_C6"...
+"Cau_3-04_C6" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+assembling Cau_3-04_C6.a51...
+linking...
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    0000H
+    TO:      0002H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 0051H
+Program Size: data=9.0 xdata=0 code=86
+creating hex file from "Cau_3-04_C6"...
+"Cau_3-04_C6" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    0000H
+    TO:      0002H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 0051H
+Program Size: data=9.0 xdata=0 code=86
+creating hex file from "Cau_3-04_C6"...
+"Cau_3-04_C6" - 0 Error(s), 3 Warning(s).

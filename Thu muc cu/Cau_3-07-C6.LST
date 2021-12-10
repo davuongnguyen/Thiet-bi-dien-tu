@@ -1,0 +1,131 @@
+A51 MACRO ASSEMBLER  CAU_3_07_C6                                                          12/08/2019 00:32:17 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN Cau_3-07-C6.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE Cau_3-07-C6.a51 SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     org 00h
+0000 8019              2     jmp main
+                       3     
+000B                   4     org 0bh
+000B 8000              5     jmp ngat_timer_0
+                       6     
+                       7     
+                       8     
+                       9     
+000D                  10     ngat_timer_0:
+000D 09               11     inc r1
+000E 758C3C           12     mov th0,#high(15536)
+0011 758AB0           13     mov tl0,#low(15536)
+0014 B91403           14     cjne r1,#20,thoat_ngat
+0017 7900             15     mov r1,#0
+0019 08               16     inc r0
+                      17     
+001A                  18     thoat_ngat:
+001A 32               19     reti
+                      20     
+                      21     
+                      22     
+                      23     
+001B                  24     main:
+001B 75A882           25     mov ie,#10000010b
+001E 758901           26     mov tmod,#00000001b
+0021 90005D           27     mov dptr,#bangma
+0024 D28C             28     setb tr0
+0026 7900             29     mov r1,#0
+                      30     
+0028                  31     lap:
+0028 7800             32     mov r0,#0
+002A                  33     lap1:
+002A 1133             34     call giaima
+002C 1141             35     call hienthi
+002E B83CF9           36     cjne r0,#60,lap1
+0031 80F5             37     jmp lap
+                      38     
+                      39     
+                      40     
+                      41     
+0033                  42     giaima:
+0033 E8               43     mov a,r0
+0034 75F00A           44     mov b,#10
+0037 84               45     div ab
+0038 93               46     movc a,@a+dptr
+0039 F530             47     mov 30h,a
+003B E5F0             48     mov a,b
+003D 93               49     movc a,@a+dptr
+003E F531             50     mov 31h,a
+                      51     
+0040 22               52     ret
+                      53     
+                      54     
+                      55     
+                      56     
+0041                  57     hienthi:
+0041 853090           58     mov p1,30h
+A51 MACRO ASSEMBLER  CAU_3_07_C6                                                          12/08/2019 00:32:17 PAGE     2
+
+0044 75A0FD           59     mov p2,#11111101b
+0047 1158             60     call delay
+0049 75A0FF           61     mov p2,#0ffh
+                      62     
+004C 853190           63     mov p1,31h
+004F 75A0FE           64     mov p2,#11111110b
+0052 1158             65     call delay
+0054 75A0FF           66     mov p2,#0ffh
+                      67     
+0057 22               68     ret
+                      69     
+                      70     
+                      71     
+                      72     
+0058                  73     delay:
+0058 7A32             74     mov r2,#50
+005A DAFE             75     djnz r2,$
+                      76     
+005C 22               77     ret
+                      78     
+                      79     
+                      80     
+                      81     
+005D C0F9A4B0         82     bangma: db 0c0h,0f9h,0a4h,0b0h,99h,92h,82h,0f8h,80h,90h
+0061 999282F8                
+0065 8090                    
+                      83     
+                      84     
+                      85     
+                      86     
+                      87     end
+A51 MACRO ASSEMBLER  CAU_3_07_C6                                                          12/08/2019 00:32:17 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+BANGMA . . . . . .  C ADDR   005DH   A   
+DELAY. . . . . . .  C ADDR   0058H   A   
+GIAIMA . . . . . .  C ADDR   0033H   A   
+HIENTHI. . . . . .  C ADDR   0041H   A   
+IE . . . . . . . .  D ADDR   00A8H   A   
+LAP. . . . . . . .  C ADDR   0028H   A   
+LAP1 . . . . . . .  C ADDR   002AH   A   
+MAIN . . . . . . .  C ADDR   001BH   A   
+NGAT_TIMER_0 . . .  C ADDR   000DH   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+THOAT_NGAT . . . .  C ADDR   001AH   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
